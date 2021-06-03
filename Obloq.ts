@@ -19,7 +19,7 @@ const OBLOQ_DEBUG = false
 const OBLOQ_MQTT_DEFAULT_SERVER = false //should be false for Stemhub Server
 //DFRobot easy iot
 const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA = "iot.dfrobot.com.cn"
-const OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL = ""
+const OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL = "iot.dfrobot.com"
 const OBLOQ_MQTT_EASY_IOT_PORT = 1883
 //other iot
 const OBLOQ_MQTT_USER_IOT_SERVER = "iot.dfrobot.com" //Stemhub Server address
