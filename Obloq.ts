@@ -16,14 +16,14 @@
 
 //debug
 const OBLOQ_DEBUG = false
-const OBLOQ_MQTT_DEFAULT_SERVER = true
+const OBLOQ_MQTT_DEFAULT_SERVER = false //should be false for Stemhub Server
 //DFRobot easy iot
 const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA = "iot.dfrobot.com.cn"
 const OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL = "iot.dfrobot.com"
 const OBLOQ_MQTT_EASY_IOT_PORT = 1883
 //other iot
-const OBLOQ_MQTT_USER_IOT_SERVER = "---.-----.---"
-const OBLOQ_MQTT_USER_IOT_PORT = 0
+const OBLOQ_MQTT_USER_IOT_SERVER = "192.168.59.164" //Stemhub Server address
+const OBLOQ_MQTT_USER_IOT_PORT = 1883
 //topic max number
 const OBLOQ_MQTT_TOPIC_NUM_MAX = 5
 //wrong type
@@ -99,7 +99,7 @@ namespace Obloq {
         China,
         //% blockId=SERVERS_Global block="Global"
         Global,
-        OtherIOT,
+        Stemhub,
     }
 
     export class PacketaMqtt {
@@ -327,7 +327,7 @@ namespace Obloq {
                 OBLOQ_MQTT_SERVER = OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL
             }   
             OBLOQ_MQTT_PORT = OBLOQ_MQTT_EASY_IOT_PORT
-        } else { 
+        } else if (SERVER == SERVERS.Stemhub) { 
             OBLOQ_MQTT_SERVER = OBLOQ_MQTT_USER_IOT_SERVER
             OBLOQ_MQTT_PORT = OBLOQ_MQTT_USER_IOT_PORT
         }
@@ -436,8 +436,8 @@ namespace Obloq {
                     Obloq_start_connect_mqtt(SERVERS.China, "connect " + type)
                 } else if (OBLOQ_MQTT_SERVER = OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL) {
                     Obloq_start_connect_mqtt(SERVERS.Global, "connect " + type)
-                } else {
-                    //do nothing
+                } else if (OBLOQ_MQTT_SERVER = OBLOQ_MQTT_USER_IOT_SERVER) {
+                    Obloq_start_connect_mqtt(SERVERS.Stemhub, "connect " + type) //use Stemhub Server
                 }
                 if (OBLOQ_MQTT_INIT) {
                     OBLOQ_WRONG_TYPE = OBLOQ_STR_TYPE_IS_NONE
