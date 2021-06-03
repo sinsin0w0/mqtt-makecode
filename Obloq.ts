@@ -327,7 +327,7 @@ namespace Obloq {
                 OBLOQ_MQTT_SERVER = OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL
             }   
             OBLOQ_MQTT_PORT = OBLOQ_MQTT_EASY_IOT_PORT
-        } else if (SERVER == SERVERS.Stemhub) { 
+        } else { 
             OBLOQ_MQTT_SERVER = OBLOQ_MQTT_USER_IOT_SERVER
             OBLOQ_MQTT_PORT = OBLOQ_MQTT_USER_IOT_PORT
         }
