@@ -15,7 +15,7 @@
 
 
 //debug
-const OBLOQ_DEBUG = true //try changing to true
+const OBLOQ_DEBUG = false //try changing to true
 const OBLOQ_MQTT_DEFAULT_SERVER = true //should be false for Stemhub Server
 //DFRobot easy iot
 const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA = "iot.dfrobot.com.cn"
