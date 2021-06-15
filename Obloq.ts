@@ -22,7 +22,7 @@ const OBLOQ_MQTT_EASY_IOT_SERVER_CHINA = "iot.dfrobot.com.cn"
 const OBLOQ_MQTT_EASY_IOT_SERVER_GLOBAL = "iot.dfrobot.com"
 const OBLOQ_MQTT_EASY_IOT_PORT = 1883
 //other iot
-const OBLOQ_MQTT_USER_IOT_SERVER = "52.221.241.119" //Stemhub Server address
+const OBLOQ_MQTT_USER_IOT_SERVER = "18.141.209.97" //Stemhub Amazon Server address
 const OBLOQ_MQTT_USER_IOT_PORT = 1883
 //topic max number
 const OBLOQ_MQTT_TOPIC_NUM_MAX = 5
