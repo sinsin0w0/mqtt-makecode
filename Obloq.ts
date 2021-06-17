@@ -55,8 +55,8 @@ namespace Obloq {
 
     //serial
     let OBLOQ_SERIAL_INIT = OBLOQ_BOOL_TYPE_IS_FALSE
-    let OBLOQ_SERIAL_TX   = SerialPin.P2
-    let OBLOQ_SERIAL_RX   = SerialPin.P1
+    let OBLOQ_SERIAL_TX   = SerialPin.P12 //blueWire try P12
+    let OBLOQ_SERIAL_RX   = SerialPin.P8 //greenWire try P8
     //wifi
     let OBLOQ_WIFI_SSID     = OBLOQ_STR_TYPE_IS_NONE
     let OBLOQ_WIFI_PASSWORD = OBLOQ_STR_TYPE_IS_NONE
