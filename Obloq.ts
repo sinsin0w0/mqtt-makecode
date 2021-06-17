@@ -54,7 +54,7 @@ enum TOPIC {
 namespace Obloq {
 
     //serial
-    let OBLOQ_SERIAL_INIT = OBLOQ_BOOL_TYPE_IS_FALSE
+    let OBLOQ_SERIAL_INIT = OBLOQ_BOOL_TYPE_IS_FALSE//
     let OBLOQ_SERIAL_TX   = SerialPin.P2 //blueWire try P12
     let OBLOQ_SERIAL_RX   = SerialPin.P1 //greenWire try P8
     //wifi
