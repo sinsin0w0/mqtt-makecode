@@ -517,6 +517,31 @@ namespace Obloq {
         Obloq_start_connect_mqtt(SERVER,"connect wifi")
     }
 
+//% weight=150
+    //% receive.fieldEditor="gridpicker" receive.fieldOptions.columns=3
+    //% send.fieldEditor="gridpicker" send.fieldOptions.columns=3
+    //% SERVER.fieldEditor="gridpicker" SERVER.fieldOptions.columns=2
+    //% blockId=login
+    //% block="Obloq setup mqtt | Pin set: | receiving data (green wire): %receive| sending data (blue wire): %send | Wi-Fi: | name: %SSID| password: %PASSWORD| IoT service: | Iot_id: %IOT_ID| Iot_pwd: %IOT_PWD| (default topic_0) Topic: %IOT_TOPIC | start connection: | Servers: %SERVER"
+    export function login(/*serial*/receive: SerialPin, send: SerialPin,
+        /*wifi*/SSID: string, PASSWORD: string,
+        /*mqtt*/IOT_ID: string, IOT_PWD: string, IOT_TOPIC: string,
+        /*connect*/SERVER: SERVERS):
+void { 
+OBLOQ_WIFI_SSID = SSID
+OBLOQ_WIFI_PASSWORD = PASSWORD
+OBLOQ_MQTT_PWD = IOT_PWD
+OBLOQ_MQTT_ID = IOT_ID
+OBLOQ_MQTT_TOPIC[0][0] = IOT_TOPIC
+OBLOQ_SERIAL_TX = send
+OBLOQ_SERIAL_RX = receive
+Obloq_serial_init()
+Obloq_start_connect_mqtt(SERVER,"connect wifi")
+}
+
+
+
+
     /**
      * Disconnect the serial port.
     */
